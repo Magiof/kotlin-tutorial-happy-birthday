@@ -1,33 +1,56 @@
+# ============================
 # Gradle files
 .gradle/
-build/
+**/build/
 
-# Local configuration file (sdk path, etc)
+# Keep gradle wrapper jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local configuration (SDK path, signing info, etc)
 local.properties
 
-# Log/OS Files
+# Log & OS
 *.log
+.DS_Store
+Thumbs.db
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
-
-# IntelliJ
-*.iml
+# Android Studio/IntelliJ
 .idea/
+*.iml
 misc.xml
 deploymentTargetDropDown.xml
 render.experimental.xml
 
-# Keystore files
+# Android build artifacts
+*.apk
+*.ap_
+*.aab
+*.aar
+*.dex
+*.class
+*.hprof
+output.json
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Jetpack Compose compiler artifacts (just to be safe)
+.compose-cache/
+.kotlin_module/
+.metadata/
+
+# Keystore and signing
 *.jks
 *.keystore
 
-# Google Services (e.g. APIs or Firebase)
+# Google Services / Firebase
 google-services.json
+crashlytics-build.properties
+com_crashlytics_export_strings.xml
+fabric.properties
 
-# Android Profiling
-*.hprof
+# NDK
+obj/
+
+# Other
+*.lock
